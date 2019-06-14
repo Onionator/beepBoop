@@ -14,9 +14,22 @@ $(document).ready(function() {
     // join all elements of array into a string with spaces between each element
     userInput = arrayToStringWithSpaces(workingArray);
     // output final string
-    $(".result").text(userInput);
+    //$("#result").text(userInput);
+    console.log(userInput.charAt(0));
 
-    
+    //create a typeWriter
+    var n = 0;
+    typeWriter(n);
+    function typeWriter(n) {
+    if (n < userInput.length) {
+      $("#result").append(userInput.charAt(n));
+      n++;
+      setTimeout(function(){typeWriter(n);}, 20);
+      
+      }
+    }
+
+
 
 
 
