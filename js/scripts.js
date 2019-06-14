@@ -27,7 +27,7 @@ $(document).ready(function() {
     function findThrees(arrayOfNumbers) {
       for (i = 0; i < arrayOfNumbers.length; i++) {
         if (arrayOfNumbers[i].toString().search("3") !== -1) {
-          arrayOfNumbers[i] = "I'm sorry Dave, I can't do that.";
+          arrayOfNumbers[i] = '"I\'m sorry, Dave. I\'m afraid I can\'t do that."';
         }
       }
       return arrayOfNumbers;
@@ -36,7 +36,7 @@ $(document).ready(function() {
     function findTwos(arrayOfNumbers) {
       for (i = 0; i < arrayOfNumbers.length; i++) {
         if (arrayOfNumbers[i].toString().search("2") !== -1) {
-          arrayOfNumbers[i] = "Boop";
+          arrayOfNumbers[i] = '"Boop!"';
         }
       }
       return arrayOfNumbers;
@@ -45,14 +45,14 @@ $(document).ready(function() {
     function findOnes(arrayOfNumbers) {
       for (i = 0; i < arrayOfNumbers.length; i++) {
         if (arrayOfNumbers[i].toString().search("1") !== -1) {
-          arrayOfNumbers[i] = "Beep";
+          arrayOfNumbers[i] = '"Beep!"';
         }
       }
       return arrayOfNumbers;
     }
-    // join all elements of array into a string with spaces between each element
+    // join all elements of array into a string with spaces and commas between each element
     function arrayToStringWithSpaces(array) {
-      return array.join(" ");
+      return array.join(", ");
     }
   });
 });
