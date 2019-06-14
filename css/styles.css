@@ -7,9 +7,35 @@
 }
 
 .contentBox {
-  border: 1px solid grey;
+  border: 1px solid lightgrey;
   border-radius: 20px;
   box-shadow: 3px -3px lightgrey;
   margin: 10px;
   padding: 10px;
+}
+
+.answerBox {
+  min-height: 150px;
+}
+
+.result {
+  display: hidden;
+}
+
+.typing {
+  overflow: hidden;
+  border-right: 5px solid #2fafaf;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation: typewriter 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typewriter {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to {border-color: transparent }
+  50% { border-color: #2fafaf; }
 }

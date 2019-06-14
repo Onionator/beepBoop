@@ -14,7 +14,12 @@ $(document).ready(function() {
     // join all elements of array into a string with spaces between each element
     userInput = arrayToStringWithSpaces(workingArray);
     // output final string
-    $("#result").text(userInput);
+    $(".result").text(userInput);
+
+    
+
+
+
     //create a range of numbers between 0 and numberInput
     function createRange(numberInput) {
       var numberRangeArray = [];
