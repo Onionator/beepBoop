@@ -1,6 +1,8 @@
 $(document).ready(function() {
   // Gets user input. Builds a string of numbers from 0 counting up to user specified number. Replaces all numbers containing 1, 2, or 3 with specified text. Returns a string.
   $("button").click(function() {
+    //used to show hidden cursor like thing used in animation
+    $("#result").show();
     //get user textInput and store only integers
     var userInput = parseInt($("input:text[name=numberInput]").val());
     //Builds a string of numbers from 0 counting up to user specified number
@@ -13,26 +15,8 @@ $(document).ready(function() {
     workingArray = findOnes(workingArray);
     // join all elements of array into a string with spaces between each element
     userInput = arrayToStringWithSpaces(workingArray);
-    // output final string
-    //$("#result").text(userInput);
-    console.log(userInput.charAt(0));
-
-    //create a typeWriter
-    var n = 0;
-    typeWriter(n);
-    function typeWriter(n) {
-    if (n < userInput.length) {
-      $("#result").append(userInput.charAt(n));
-      n++;
-      setTimeout(function(){typeWriter(n);}, 20);
-      
-      }
-    }
-
-
-
-
-
+    //output the modified string
+    output(userInput);
     //create a range of numbers between 0 and numberInput
     function createRange(numberInput) {
       var numberRangeArray = [];
@@ -71,6 +55,21 @@ $(document).ready(function() {
     // join all elements of array into a string with spaces and commas between each element
     function arrayToStringWithSpaces(array) {
       return array.join(", ");
+    }
+    //output the modified string with a typewriter effect
+    function output(aString) {
+      // clear the output area of any previous text
+      $("#result").text("");
+      //create a typeWriter effect for the output
+      var n = 0;
+      typeWriter(n);
+      function typeWriter(n) {
+        if (n < aString.length) {
+          $("#result").append(aString.charAt(n));
+          n++;
+          setTimeout(function(){typeWriter(n);}, 20);
+        }
+      }
     }
   });
 });

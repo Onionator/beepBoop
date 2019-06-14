@@ -1,6 +1,13 @@
 input {
+  background-color: #2fafaf;
+  border: none;
+  border-radius: 20px;
+  font-size: 20px;
+  padding: 3px;
   width: 100%;
+  outline: none;
 }
+
 
 .container {
   margin-left: auto;
@@ -21,13 +28,17 @@ input {
 .answerBox {
   min-height: 150px;
 }
-
+/* learned the next few lines of code from w3school. I unfortunately can't find the correct link for the specific page. */
 .typing {
   overflow: hidden;
   border-right: 5px solid #2fafaf;
   margin: 0 auto;
   letter-spacing: .15em;
-  animation: typewriter 3.5s steps(40, end), blink-caret .75s step-end infinite;
+  animation: typewriter 3.5s steps(40, end), cursor .75s step-end infinite;
+}
+
+#result {
+  display: none;
 }
 
 @keyframes typewriter {
@@ -35,7 +46,7 @@ input {
   to { width: 100% }
 }
 
-@keyframes blink-caret {
+@keyframes cursor {
   from, to {border-color: transparent }
   50% { border-color: #2fafaf; }
 }
