@@ -1,11 +1,26 @@
 input {
-  background-color: #2fafaf;
-  border: none;
+  background-color: none;
+
   border-radius: 20px;
   font-size: 20px;
   padding: 3px;
-  width: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
   outline: none;
+
+}
+
+button {
+  font-size: 20px;
+  outline: none;
+  margin: 20px;
+  border-radius: 20px;
+}
+
+button:hover {
+  box-shadow: 3px -3px lightgrey;
+  padding: 5px;
+  font-size: 24px;
 }
 
 
@@ -35,6 +50,11 @@ input {
   margin: 0 auto;
   letter-spacing: .15em;
   animation: typewriter 3.5s steps(40, end), cursor .75s step-end infinite;
+}
+
+input.typing {
+  border-left: 5px solid #2fafaf;
+  border-left: none;
 }
 
 #result {
