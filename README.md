@@ -29,6 +29,27 @@ If an issue is found please email WhenPotatoesFry@gmail.com
 * JavaScript
 * JQuery
 
+1. Build a string of numbers from 0 counting up to user specified number
+  * input: 5
+  * output: 0, 1, 2, 3, 4, 5
+
+2. find all numbers containing 3's and replace all numbers containing 3's with "I'm sorry Dave, I can't do that."
+  * input: 0, 1, 2, 3, 4, 5
+  * output: 0, 1, 2, "I'm sorry Dave, I can't do that.", 4, 5
+
+3. find all the numbers containing 2's and replace 2's with "Boop!"
+  * input: 0, 1, 2, "I'm sorry Dave, I can't do that.", 4, 5
+  * output: 0, 1, "Boop!", "I'm sorry Dave, I can't do that.", 4, 5
+
+4. find all the numbers containing 1's and replace 1's with "Beep!"
+  * input: 0, 1, "Boop!", "I'm sorry Dave, I can't do that.", 4, 5
+  * output: 0, "Beep!", "Boop!", "I'm sorry Dave, I can't do that.", 4, 5
+
+5. join all elements of array into a string with spaces and commas between each element
+  * input: 0, "Beep!", "Boop!", "I'm sorry Dave, I can't do that.", 4, 5
+  * output: 0, "Beep!", "Boop!", "I'm sorry Dave, I can't do that.", 4, 5
+
+
 ### License
 
 MIT
